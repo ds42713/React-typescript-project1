@@ -8,16 +8,14 @@ const baseUrl = "https://dummyjson.com/products/search?q="
 export default function Product() {
 
   const [seach, setSeach] = useState<string>("")
-  const [product, setProduct] = useState<namespace.Product[]|null|undefined>()
+  const [product, setProduct] = useState<namespace.Product[]>([])
 
   const click = async () => {
     try{
       const res: any  = await axios.get(baseUrl + seach)
-      // const getProduct: <RootObject> = res.data
       await setProduct(res.data.products)
 
       console.log(res)
-      //console.log(res.data)
       console.log(product)
     }catch(err){
       console.log(err)
@@ -29,7 +27,7 @@ export default function Product() {
     console.log(product)
   }
   if (product) {
-    listProduct = <ProductList  product={product} />
+    listProduct = <ProductList  product={product} name="qwerty" />
   } 
 
   return (

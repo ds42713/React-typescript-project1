@@ -1,13 +1,17 @@
 import React from 'react'
 import { namespace } from '../../interface/ProductInterface'
 
-export const ProductItem = () => {
+interface IProductProps {
+  product: namespace.Product
+}
+
+export const ProductItem:React.FC<IProductProps> = ({product}) => {
 
 
   return (
     <div>
       ProductItem     
-      
+      {product.title}
     </div>
   )
 }
