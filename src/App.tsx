@@ -1,11 +1,10 @@
 import React from 'react';
-import Product from './component/product/Product';
-
+import RouteConfig from './routes/RouteConfig';
 
 function App() {
   return (
     <div >  
-        <Product/>       
+        <RouteConfig/>       
     </div>
   );
 }
