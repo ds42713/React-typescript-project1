@@ -10,12 +10,12 @@ export const ProductItem: React.FC<IProductProps> = ({ product }) => {
   
   return (
     <>
-      <Card sx={{ maxWidth: 300 }} className="m-4 flex flex-col justify-around">
+      <Card sx={{ maxWidth: 200 }} className="m-4 flex flex-col justify-around">
         <CardMedia
           component="img"
           image={product.images[0]}
           alt="green iguana"
-          className="h-72"
+          className="h-72 border-4 border-indigo-500/100 object-scale-down"
           
         />
         <div>

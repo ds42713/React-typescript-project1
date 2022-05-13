@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ResponsiveNavBar = () => {
-  const [menuOpen, setMenuOpen] = useState<Boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="bg-black">
       <div className="flex items-center justify-between flex-wrap bg-black p-6">
@@ -15,8 +15,8 @@ const ResponsiveNavBar = () => {
         </div>
 
         {/* Links shown in a row on larger screens */}
-        <nav className="hidden  flex-grow md:flex md:items-center md:w-auto  space-x-6 " >
-          {/* className="hidden md:block space-x-6" */}
+        <nav className="hidden  flex-grow md:flex md:items-center md:w-auto  space-x-6 " > 
+        {/* className="hidden md:block space-x-6" */}
           <div className="text-sm flex md:flex-grow ">
             <Link to="/product" >
               <div className="block  lg:inline-block  text-teal-200 hover:text-white mr-4">
@@ -43,22 +43,22 @@ const ResponsiveNavBar = () => {
           <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
         </button>
       </div>
-
+      
       {/* Mobile */}
       {menuOpen &&
         <nav className="p-4 flex flex-col space-y-3 md:hidden">
           <Link to="/product" >
-            <div className="block  text-teal-200 hover:text-white mr-4">
+            <div className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               Product
             </div>
           </Link>
           <Link to="/product" >
-            <div className="block  text-teal-200 hover:text-white mr-4">
+            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               Examples
-            </div>
+            </a>
           </Link>
           <Link to="/product" >
-            <div className="block  text-teal-200 hover:text-white mr-4">
+            <div className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               Blog
             </div>
           </Link>
